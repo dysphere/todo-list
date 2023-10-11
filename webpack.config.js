@@ -3,7 +3,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    dom: './src/dom.js',
+    list: './src/todo-list.js',
+    todos: './src/todos.js',
+  },
   devtool: 'inline-source-map',
   devServer: {
     static: './dist',
@@ -11,6 +16,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Todo List',
+      template: 'dist/index.html'
     }),
   ],
   output: {
