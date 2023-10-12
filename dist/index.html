@@ -3,9 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Todo List</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="dom.bundle.js"></script><script defer src="list.bundle.js"></script><script defer src="todos.bundle.js"></script><script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="dom.bundle.js"></script><script defer src="list.bundle.js"></script><script defer src="todos.bundle.js"></script></head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="list.bundle.js"></script><script defer src="todos.bundle.js"></script></head>
   <body>
-    <div id="sidebar"></div>
+    <div id="container">
+    <div id="header">
+      <h1>To-do Tracker</h1>
+    </div>
+    <div id="sidebar">
+      <h1>Home</h1>
+      <div class="buttons">
+        <button id="all">All</button>
+        <button id="today">Today</button>
+        <button id="week">Next Week</button>
+      </div>
+      <h1>Projects</h1>
+      <div class="sideproject">
+      <button id="addproj">Add Project</button>
+      </div>
+    </div>
     <div id="main"></div>
+    </div>
   </body>
 </html>

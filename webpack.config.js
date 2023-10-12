@@ -5,7 +5,6 @@ module.exports = {
     mode: 'development',
   entry: {
     index: './src/index.js',
-    dom: './src/dom.js',
     list: './src/todo-list.js',
     todos: './src/todos.js',
   },

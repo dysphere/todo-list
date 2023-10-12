@@ -15,16 +15,18 @@ const todolist = (() => {
     const newtodo = (title, description, dueDate, priority, completion, projectname = "Unsorted") => {
         let todo = todoFactory(title, description, dueDate, priority, completion)
         if (projectname == "Unsorted") {
-            projectArray[0][todoArray].push(todo)
+            projectArray[0].todoArray.push(todo)
         }
         else {
             projectArray.findIndex(function(project) {
                 let projIndex = project.title === projectname
-                projectArray[projIndex][todoArray].push(todo)
+                return projIndex;
             })
+            projectArray[projectArray.findIndex(project)].todoArray.push(todo)
         }
     }
-    const viewtodo = (() => {
+
+    const viewproject = (() => {
         let i = 0;
         while (i < projectArray.length) {
             console.log(projectArray[i])
@@ -32,14 +34,60 @@ const todolist = (() => {
         }
     })
 
-    const deletetodo = (() => {
-
+    const viewtodo = (() => {
+        let i = 0;
+        while (i < projectArray.length) {
+            let j = 0;
+            while (j < projectArray[i].todoArray.length) {
+                console.log(projectArray[i].todoArray[j].title)
+                console.log(projectArray[i].todoArray[j].dueDate)
+                j++;
+            }
+            i++;
+        }
     })
 
-    return {newproject, newtodo, viewtodo}
+    const expandtodo = ((title) => {
+        let i = 0;
+        while (i < projectArray.length) {
+            let j = 0;
+            while (j < projectArray[i].todoArray[j].length) {
+                projectArray[i].todoArray.findIndex(function(todo) {
+                    let todoIndex = todo.title === title
+                    return todoIndex;
+                })
+                if (projectArray[i].findIndex(todo) != -1) {
+                    console.log(projectArray[i].todoArray[projectArray[i].findIndex(todo)])
+                }
+                j++;
+            }
+            i++;
+        }
+    })
+
+    const deletetodo = ((title) => {
+        let i = 0;
+        while (i < projectArray.length) {
+            let j = 0;
+            while (j < projectArray[i].todoArray[j].length) {
+                projectArray[i].todoArray.findIndex(function(todo) {
+                    let todoIndex = todo.title === title
+                    return todoIndex;
+                })
+                if (projectArray[i].todoArray.findIndex(todo) != -1) {
+                    
+                }
+                j++;
+            }
+            i++;
+        }
+    })
+
+    return {newproject, newtodo, viewproject, viewtodo, expandtodo, deletetodo}
 })();
 
 todolist.newtodo("Read", "read a book", formatRelative(addDays(new Date(), 7), new Date()), "High", false)
 todolist.viewtodo()
+todolist.viewproject()
 
 export {todolist}

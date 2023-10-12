@@ -1,0 +1,40 @@
+#container {
+    display: grid;
+    grid-template-rows: 100px 1000px;
+    grid-template-columns: 300px 1000px;
+}
+
+#sidebar {
+    grid-column: 0 / 1;
+    grid-row: 0 / 1;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 30px;
+}
+
+#all {
+grid-column: 1 / 2;
+}
+
+#today {
+grid-column: 1 / 2;
+}
+
+#week {
+grid-column: 1 / 2;
+}
+
+#header {
+    grid-column: 0 / 2;
+    grid-row: 0 / 1;
+
+}
+
+#main {
+grid-column: 1 / 2;
+grid-row: 1 / 2;
+}

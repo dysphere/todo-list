@@ -6,7 +6,7 @@ const todoFactory = (title, description, dueDate, priority, completion) => {
         priority = priorityArray[n]
     }
     const changeCompletion = () => {
-        if (completion == true) {
+        if (completion === true) {
             completion = false
         }
         else {
