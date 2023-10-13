@@ -83,7 +83,7 @@ const todolist = (() => {
         }
     })
 
-    return {newproject, newtodo, viewproject, viewtodo, expandtodo, deletetodo}
+    return {newproject, newtodo, viewproject, viewtodo, expandtodo, deletetodo, projectArray}
 })();
 
 todolist.newtodo("Read", "read a book", formatRelative(addDays(new Date(), 7), new Date()), "High", false)
