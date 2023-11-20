@@ -17,6 +17,20 @@
     row-gap: 30px;
 }
 
+.moreprojects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+}
+
+#unsorted {
+grid-column: 1 / 2;
+}
+
+#addproj {
+grid-column: 1 / 2
+}
+
 #all {
 grid-column: 1 / 2;
 }
@@ -38,4 +52,12 @@ grid-column: 1 / 2;
 #main {
 grid-column: 2 / 3;
 grid-row: 2 / 3;
+}
+
+.pic {
+    height: 25px;
+}
+
+.todo {
+    display: flex;
 }
