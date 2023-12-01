@@ -59,5 +59,7 @@ grid-row: 2 / 3;
 }
 
 .todo {
-    display: flex;
+    display: grid;
+    grid-template-columns: 20px 30px 75px 50px 25px 1fr 1fr;
+    column-gap: 30px;
 }

@@ -42,7 +42,8 @@
           </li>
           <li>
             <label>Priority: </label>
-            <select names="plevels">
+            <select id="plevels">
+              <option value="none" selected disabled hidden>Select an Option</option>
               <option value="Low">Low</option>
               <option value="Medium">Medium</option>
               <option value="High">High</option>
@@ -53,7 +54,7 @@
             <input>
           </li>
         </ul>
-        <button>Submit</button>
+        <button id="tosubmit">Submit</button>
         </form>
       </dialog>
       <dialog class="newproj">
